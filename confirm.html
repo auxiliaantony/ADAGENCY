@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<title>ad confirmation</title>
+
+<style>
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   height:25%;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+h4 {
+   text-align : left;
+}   
+</style>
+
+<script>
+ function disableSubmit() {
+  document.getElementById("submit").disabled = true;
+ }
+
+  function activateButton(element) {
+
+      if(element.checked) {
+        document.getElementById("submit").disabled = false;
+       }
+       else  {
+        document.getElementById("submit").disabled = true;
+      }
+
+  }
+</script>
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+	<div class="container">
+     		 <a class="navbar-brand"> <font color="white"><span class="glyphicon glyphicon-shopping-cart">ONLINE AD AGENCY </span></font></a> 
+    	</div>
+    </div>
+   
+    <ul class="nav navbar-nav navbar-right">
+    
+    
+   <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span>signup</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">admin</a></li>
+          <li><a href="usersignup.html">user</a></li>
+        </ul>
+      </li>
+      
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-log-in"></span> login</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">admin</a></li>
+          <li><a href="#">user</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+  
+  
+  <form action="view.html" onsubmit="if(document.getElementById('agree').checked) { return true; } else { alert('Please indicate that you have read and agree to the Terms and Conditions and Privacy Policy'); return false; }">
+
+		<center> 
+		
+			<input type="checkbox" name="checkbox" value="check" id="agree" /> I agree  the Terms and Conditions and Privacy Policy of Online Ad Agency <br/><br/>
+			<input type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" name="confirm ad" value="confirm ad" />
+		</center>
+		
+</form>
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="container">  
+    <h4>  <span class="glyphicon glyphicon-envelope"></span>  
+    <a href="mailto:INFO@BROLIK.com"> info@brolik.com</a></p></h4>   
+   </div>
+   <div class="container">  
+    <h4>  <span class="glyphicon glyphicon-phone"></span>  
+   		987456123
+   	</h4>
+  </div>
+   <div class="container">
+    <h4>  <span class="glyphicon glyphicon-map-marker"></span>  
+   421 N7TH STREET
+   <P></P>
+   <P> SUITE 701 </P>
+   <P> PHILADELPHIA PA 19123 </P>
+   
+   </h4>   
+  </div>  
+    
+</div>
+</body>
+</html>

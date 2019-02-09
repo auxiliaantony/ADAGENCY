@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script>
+function myFunction() {
+    var x = document.getElementById("myEmail").pattern;
+    document.getElementById("demo").innerHTML = x;
+}
+</script>
+</head>
+
+<body>
+
+
+<form action="Addprofile"  method="post" >
+  	FIRST NAME  <input type="text" name="firstname" class="form-control" /><br/><br/>
+	LASTNAME   <input type="text"  name="lastname"class="form-control" /><br/><br/>
+	MAIL ID    <input  type="email" id="myEmail" name="emailid" class="form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+	MOBILE NO    <input type="text" name="mobileno" class="form-control"/><br/><br/>
+	<input type="submit" class="btn btn-primary"value="Register" />
+</form>
+</body>
+</html>

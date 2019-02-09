@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>USERS SIGN IN</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script >
+function validateform() {
+	var uname = document.getElementById("txt-name");
+	var password = document.getElementById("txt-password");
+	if (uname.value === "" || password.value === "") {
+		if (uname.value === "" && password.value === "") {
+			document.getElementById("content").innerHTML = "<b><h3 style='color:red;font-family:Arabic Typesetting;text-align:center'>USERNAME AND PASSWORD IS EMPTY</h3></b>"
+			return false;
+		} else if (password.value === "") {
+			document.getElementById("content").innerHTML = "<h3 style='color:red;font-family:Arabic Typesetting;text-align:center'>PASSWORD IS EMPTY</h3>"
+			return false;
+		} else {
+			document.getElementById("content").innerHTML = "<h3 style='color:red;font-family:Arabic Typesetting;text-align:center'>USER NAME IS EMPTY</h3>"
+			return false;
+		}
+	} else {
+		return true;
+	}
+}
+function togglePassword() {
+	var text = document.getElementById("txt-password");
+	var buttons = document.getElementById("btn-password");
+	var type = text.getAttribute('type');
+	var condition = (type === 'text' ? 'password' : 'text');
+	text.setAttribute('type', condition);
+	buttons.setAttribute('value',
+			((type == 'text' ? 'SHOW ' : 'HIDE ') + 'PASSWORD'));
+}
+
+
+</script>
+<style>
+
+
+fieldset {
+    margin: 20px 500px;
+    padding: 5px;
+    border: 2px solid #bdc3c7;
+    border-radius: 25px;
+}
+legend {
+    color: #2c3e50;
+}
+.form-holder {
+    width: 460px;
+    margin: 10px auto;
+    background: #ecf0f1;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.align-center {
+text-align :center;
+}
+
+</style>
+</head>
+<body background="img4.jpg">
+    
+    
+	<div id="content" ></div>
+	<form action="UserLogin" method="get">
+		<legend><center>LOGIN </center></legend>
+	<div  class="align-center" >
+		<input type="text" name="firstname" placeholder="username" id="txt-name"/></div><br><br>
+	
+		
+		<div  class="align-center" >
+				<input type="text" name="password" placeholder="PASSWORD" id="txt-password" /> 
+		
+						<input type="button" class="btn btn-outline-info btn-sm" onclick="togglePassword()"id="btn-password" value="showpassword" /><br><br> 
+		</div>
+		<div  class="align-center" >
+				<input type="submit"  class="btn btn-primary btn-sm" value="SIGN IN" />
+		</div>
+
+	</form>
+	   
+</body>
+</html>
+

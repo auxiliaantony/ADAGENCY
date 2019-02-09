@@ -1,0 +1,56 @@
+<html>
+<head>
+  <title> Log</title>
+  <script>
+  function check(form)
+  {
+   if(form.username.value == "name" && form.password.value == "pass")
+    {
+      window.open('');
+    }
+
+   else if(form.username.value == "name1" && form.password.value == "pass1")
+    {
+      window.open('');
+    }
+
+   else if(form.username.value == "name2" && form.password.value == "pass2")
+   {
+     window.open('');
+    }
+
+   else
+   {
+     window.open('');
+    }
+  }
+  </script>
+  
+</head>
+<body>
+<div id="header">
+    <div class="pageWidth">
+    </div>
+</div>
+<div>
+
+    <table align = center>
+                <tr height = 100 /tr>
+                <tr height = 200 /tr>
+                    <td width = 400 align = center id = "box" /td>  
+                        <table>
+                                <form name="login">
+                                <tr id = "spacing" ></tr>
+                                <tr align = "center"> <td  colspan =2 /td></tr>
+                                    <tr><td width=5>Username:</td><td width=300><input type="text" name="username" autofocus></td></tr>
+                                    <tr><td width=5>Password:</td><td width=300><input type="password" name="password"></td></tr>
+                                    <tr><td colspan = 2 align=right><input id="login" type="submit" onclick="check(this.form)" value="Login"/>
+                                </table>
+                                </div>
+                                </form>
+    </table>
+
+<script type="text/javascript" src="login.js"></script> 
+
+</body>
+</html>
